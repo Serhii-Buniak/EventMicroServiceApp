@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: city-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cityservice
+  template:
+    metadata:
+      labels:
+        app: cityservice
+    spec:
+      containers:
+        - name: citymicroservice
+          image: serhiibuniak/citymicroservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: city-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: cityservice
+  ports:
+  - name: cityservice
+    protocol: TCP
+    port: 80
+    targetPort: 80
+  - name: citygrpc
+    protocol: TCP
+    port: 50051
+    targetPort: 50051
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: city-np-srv
+spec:
+  type: NodePort
+  selector:
+    app: cityservice
+  ports:
+    - name: cityservice
+      protocol: TCP
+      port: 80
+      targetPort: 80

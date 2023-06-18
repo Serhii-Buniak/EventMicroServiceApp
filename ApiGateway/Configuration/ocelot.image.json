@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Image",
+      "ServiceName": "Image",
+      "UpstreamPathTemplate": "/api/Image",
+      "SwaggerKey": "Image"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Image/{everything}",
+      "ServiceName": "Image",
+      "UpstreamPathTemplate": "/api/Image/{everything}",
+      "SwaggerKey": "Image"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Gallery",
+      "ServiceName": "Image",
+      "UpstreamPathTemplate": "/api/Gallery",
+      "SwaggerKey": "Image"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Gallery/{everything}",
+      "ServiceName": "Image",
+      "UpstreamPathTemplate": "/api/Gallery/{everything}",
+      "SwaggerKey": "Image"
+    }
+  ]
+}

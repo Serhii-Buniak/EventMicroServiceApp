@@ -1,0 +1,52 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Auth",
+      "ServiceName": "Identity",
+      "UpstreamPathTemplate": "/api/Auth",
+      "SwaggerKey": "Identity",
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true,
+        "UseCookieContainer": true,
+        "UseTracing": true,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Auth/{everything}",
+      "ServiceName": "Identity",
+      "UpstreamPathTemplate": "/api/Auth/{everything}",
+      "SwaggerKey": "Identity",
+      "HttpHandlerOptions": {
+        "AllowAutoRedirect": true,
+        "UseCookieContainer": true,
+        "UseTracing": true,
+        "MaxConnectionsPerServer": 100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Role",
+      "ServiceName": "Identity",
+      "UpstreamPathTemplate": "/api/Role",
+      "SwaggerKey": "Identity"
+    },
+    {
+      "DownstreamPathTemplate": "/api/User",
+      "ServiceName": "Identity",
+      "UpstreamPathTemplate": "/api/User",
+      "SwaggerKey": "Identity"
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/{everything}",
+      "ServiceName": "Identity",
+      "UpstreamPathTemplate": "/api/User/{everything}",
+      "SwaggerKey": "Identity"
+    },
+    {
+      "DownstreamPathTemplate": "/api/TestAuth/{everything}",
+      "ServiceName": "Identity",
+      "UpstreamPathTemplate": "/api/TestAuth/{everything}",
+      "SwaggerKey": "Identity"
+    }
+  ]
+}

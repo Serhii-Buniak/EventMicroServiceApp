@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+option csharp_namespace = "EventMicroService.Infrastructure.Protos";
+
+package city;
+
+service GrpcCity {
+
+    rpc GetAllCities (GetAllRequest) returns (CitiesResponse);
+    rpc GetAllCountries (GetAllRequest) returns (CountriesResponse);
+}
+
+message GetAllRequest {
+
+}
+
+message GrpcCityModel {
+  int64 id = 1;
+  string name = 2;
+  int64 countryId = 3;
+}
+
+message GrpcCountryModel {
+  int64 id = 1;
+  string name = 2;
+}
+
+message CitiesResponse {
+    repeated GrpcCityModel city = 1;
+}
+
+message CountriesResponse {
+    repeated GrpcCountryModel country = 1;
+}

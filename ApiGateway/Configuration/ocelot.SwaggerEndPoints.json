@@ -1,0 +1,56 @@
+{
+	"SwaggerEndPoints": [
+		{
+			"Key": "City",
+			"Config": [
+				{
+					"Name": "City API",
+					"Version": "v1",
+					"Service": {
+						"Name": "City",
+						"Path": "/swagger/v1/swagger.json"
+					}
+				}
+			]
+		},
+		{
+			"Key": "Image",
+			"Config": [
+				{
+					"Name": "Image API",
+					"Version": "v1",
+					"Service": {
+						"Name": "Image",
+						"Path": "/swagger/v1/swagger.json"
+					}
+				}
+			]
+		},
+		{
+			"Key": "Identity",
+			"Config": [
+				{
+					"Name": "Identity API",
+					"Version": "v1",
+					"Service": {
+						"Name": "Identity",
+						"Path": "/swagger/v1/swagger.json"
+					}
+				}
+			]
+		},
+		{
+			"Key": "Event",
+			"Config": [
+				{
+					"Name": "Event API",
+					"Version": "v1",
+					"Service": {
+						"Name": "Event",
+						"Path": "/swagger/v1/swagger.json"
+					}
+				}
+			]
+		}
+	]
+}

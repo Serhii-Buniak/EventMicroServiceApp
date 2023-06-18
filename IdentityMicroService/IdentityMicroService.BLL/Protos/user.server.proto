@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "IdentityMicroService.BLL.Protos";
+
+package user;
+
+service GrpcUser {
+
+    rpc GetAllUsers (GetAllUserRequest) returns (UsersResponse);
+}
+
+message GetAllUserRequest {
+
+}
+
+message GrpcUserModel {
+  string id = 1;
+  string email = 2;
+  string firstName = 3;
+  string lastName = 4;
+  int64 cityId = 5;
+}
+
+message UsersResponse {
+    repeated GrpcUserModel users = 1;
+}

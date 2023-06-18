@@ -1,0 +1,28 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/Event",
+      "ServiceName": "Event",
+      "UpstreamPathTemplate": "/api/Event",
+      "SwaggerKey": "Event"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Event/{everything}",
+      "ServiceName": "Event",
+      "UpstreamPathTemplate": "/api/Event/{everything}",
+      "SwaggerKey": "Event"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Category",
+      "ServiceName": "Event",
+      "UpstreamPathTemplate": "/api/Category",
+      "SwaggerKey": "Event"
+    },
+    {
+      "DownstreamPathTemplate": "/api/Category/{everything}",
+      "ServiceName": "Event",
+      "UpstreamPathTemplate": "/api/Category/{everything}",
+      "SwaggerKey": "Event"
+    }
+  ]
+}
